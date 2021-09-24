@@ -80,17 +80,17 @@ if(_enemyCount > 0) then
 {
 	if((_blufor >= _indfor) && (_blufor >= _opfor)) then 
 	{
-		[("Marker_" + (str _sectorID)), "ColorWEST"] spawn BIS_fnc_changeColorMarker;
+		[("AdvSector_" + (str _sectorID)), "ColorWEST"] spawn BIS_fnc_changeColorMarker;
 		missionNamespace setVariable [("sector_" + (str _sectorID) + "_controller"), west];
 	};
 	if((_opfor >= _indfor) && (_opfor > _blufor)) then 
 	{
-		[("Marker_" + (str _sectorID)), "ColorEAST"] spawn BIS_fnc_changeColorMarker;
+		[("AdvSector_" + (str _sectorID)), "ColorEAST"] spawn BIS_fnc_changeColorMarker;
 		missionNamespace setVariable [("sector_" + (str _sectorID) + "_controller"), east];
 	};
 	if((_indfor > _opfor) && (_indfor > _blufor)) then 
 	{
-		[("Marker_" + (str _sectorID)), "ColorGUER"] spawn BIS_fnc_changeColorMarker;
+		[("AdvSector_" + (str _sectorID)), "ColorGUER"] spawn BIS_fnc_changeColorMarker;
 		missionNamespace setVariable [("sector_" + (str _sectorID) + "_controller"), independent];
 	};
 };
