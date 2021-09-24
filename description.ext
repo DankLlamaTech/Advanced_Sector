@@ -1,0 +1,4 @@
+class cfgFunctions
+{
+	#include "sector\cfgFunctions.hpp"
+}
